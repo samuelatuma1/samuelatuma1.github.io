@@ -1,0 +1,361 @@
+:root {
+  --bgColor: rgb(244, 237, 237);
+}
+
+body {
+  background-color: var(--bgColor);
+  font-family: cursive;
+}
+
+body img {
+  width: 30px;
+  height: 30px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+}
+
+body .container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 30% 41% 29%;
+      grid-template-columns: 30% 41% 29%;
+}
+
+body .container div.chats .topChat {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .container div.chats .topChat .img {
+  width: 40%;
+}
+
+body .container div.chats .topChat .otherIcons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 59%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container div.chats .topChat .otherIcons img {
+  width: 19px;
+  height: 19px;
+}
+
+body .container div.chats .notifications .notification {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #79eaea;
+}
+
+body .container div.chats .notifications .notification .imgNot {
+  width: 25%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container div.chats .notifications .notification .notText {
+  width: 74%;
+}
+
+body .container div.chats .notifications .search {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 12px 0px;
+}
+
+body .container div.chats .notifications .search button {
+  background-color: white;
+  border: 1px solid transparent;
+  border-bottom-left-radius: 15px;
+  border-top-left-radius: 15px;
+  padding: 8px;
+}
+
+body .container div.chats .notifications .search input {
+  border: 1px solid transparent;
+  padding: 0px 10px;
+  border-bottom-right-radius: 15px;
+  border-top-right-radius: 15px;
+}
+
+body .container div.chats .convos {
+  background-color: white;
+}
+
+body .container div.chats .convos .convo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 3px;
+}
+
+body .container div.chats .convos .convo .convoImg {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container div.chats .convos .convo .chatMsg {
+  width: 68%;
+  border-bottom: 1px solid #cec9c9;
+  padding-bottom: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .container div.chats .convos .convo .chatMsg p {
+  width: 100%;
+}
+
+body .container div.chats .convos .convo .timeSeen {
+  width: 15%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border-bottom: 1px solid #cec9c9;
+  padding-bottom: 10px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .container div.chats .convos .convo .timeSeen p {
+  width: 100%;
+}
+
+body .container div.chats .convos .convo .timeSeen span {
+  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background-color: #19ae19;
+  font-size: smaller;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+body .container .message {
+  background: -webkit-gradient(linear, left top, left bottom, from(#dad9d9), to(#dcd8d8));
+  background: linear-gradient(#dad9d9, #dcd8d8);
+}
+
+body .container .message .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .message .title .messageImg {
+  width: 65%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .message .title .enquiries {
+  width: 28%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .container .message .title .enquiries span {
+  font-weight: bolder;
+}
+
+body .container .message .body {
+  width: 100%;
+  padding-bottom: 10px;
+}
+
+body .container .message .body .fromMe, body .container .message .body fromOthers {
+  width: 100%;
+  background-color: transparent;
+  margin-top: 20px;
+}
+
+body .container .message .body .msg {
+  margin: 0px 0px 0px 5px;
+  width: 70%;
+  border-radius: 15px;
+  padding: 4px 3px 4px 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .container .message .body .msg p:last-child {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  font-size: smaller;
+}
+
+body .container .message .body .fromOthers .msg {
+  background-color: white;
+  border-top-left-radius: 0px;
+}
+
+body .container .message .body .fromMe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .container .message .body .fromMe .msg {
+  margin-right: 10px;
+  background-color: #93bd3f;
+  color: white;
+  border-bottom-right-radius: 0px;
+}
+
+body .container .contactInfo {
+  background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .container .contactInfo .aboutDiv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+body .container .contactInfo .aboutDiv img {
+  width: 180px;
+  height: 180px;
+}
+
+body .container .contactInfo .aboutDiv .aboutText {
+  width: 100%;
+}
+
+body .container .contactInfo .aboutDiv .aboutText p {
+  text-indent: 30%;
+}
+
+body .container .contactInfo #forward {
+  width: 100%;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  padding: 20px;
+}
+/*# sourceMappingURL=whatsapp.css.map */
