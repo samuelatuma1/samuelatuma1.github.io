@@ -1,0 +1,329 @@
+:root{
+    --bgCol: rgb(255, 255, 255);
+    --bodyCol: rgb(249, 247, 247);
+}
+*{
+    margin: 0;
+    
+}
+
+body{
+    
+    background-color: var(--bodyCol);
+    font-family: Verdana, cursive, Geneva, Tahoma, sans-serif;
+}
+nav{
+    background-color: var(--bgCol);
+    display:flex;
+    justify-content: space-evenly;
+    
+    animation-name: rollin;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+    cursor: pointer;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    border-bottom: 1px solid var(--bodyCol);
+    
+}
+nav:hover{
+    box-shadow: 0px 8px 20px 0px rgb(194, 194, 194);
+}
+
+@keyframes rollin{
+    0%{
+        opacity: 0;
+        width: 0%;
+    }
+    66%{
+        opacity: 0;
+        width: 0%;
+    }
+    99%{
+        opacity: 1;
+        width: 100%;
+    }
+}
+nav .name{
+    text-align: center;
+    font-family: cursive;
+    font-size: large;
+    min-width: 45%;
+    transition: 0.4s linear;
+    animation-name: rollin;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+nav .name, nav .status{
+    padding: 15px 0px 15px 0px;
+}
+.status{
+    min-width: 45%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}
+.status li:hover, nav .name:hover{
+    /* background-color: rgb(255, 242, 211); */
+    background-color: black;
+    color: white;
+    padding: 15px;
+
+}
+.status li{
+    list-style-type: none;
+    text-align: center;
+    transition: 0.4s linear;
+    
+    padding: 10px 0px 10px 0px;
+    animation-name: rollin;
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+@media screen and (max-width: 800px){
+    nav .status{
+    display: none;
+    opacity: 0;
+    transition: 0.5s linear;
+}
+nav:hover .status{
+    display: block;
+    opacity: 1;
+}
+nav{
+    display:block;
+}
+}
+.aboutMe{
+    background-color: var(--bgCol);
+    
+    margin-top: 50px;
+
+    
+}
+@keyframes glow{
+    0%{
+        background-color: rgb(194, 192, 192);
+        
+    }
+    100%{
+        background-color: rgb(230, 227, 227); 
+    }
+}
+.aboutMe{
+        width: 93%;
+        margin: auto;
+        margin-top: 50px;
+        padding: 20px 8px 20px 8px;
+        transition: 0.5s linear;
+    }
+    .aboutMe:hover{
+        box-shadow: 0px 15px 30px 0px rgb(184, 182, 182);
+        border-radius: 25px;
+    }
+
+    @media screen and (min-width: 800px){
+    .aboutMe{
+        display: flex;
+
+    }
+    
+.aboutMe .myImg{
+    width: 40%;
+    }
+    .aboutMe img{
+        display: block;
+        /* background-color: navy; */
+        width: 99%;
+        
+        object-fit: cover;
+        margin: auto;
+        
+        animation: glow 0.5s linear alternate infinite;
+    }
+}
+@media screen and (max-width: 800px){
+    .aboutMe{
+        width: 99%;
+        margin: auto;
+        margin-top: 50px;
+    }
+    .aboutMe img{
+        display: block;
+        /* background-color: navy; */
+        width: 300px;
+        height: 300px;
+        border-radius: 50%;
+        
+        object-fit: cover;
+        margin: auto;
+        
+        animation: glow 0.5s linear alternate infinite;
+    }
+}
+@media screen and (min-width: 800px){
+    .aboutMe .text{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+    }
+    .aboutMe .text h2, .aboutMe .text p{
+        min-width: 70%;
+    }
+}
+.aboutMe .text{
+
+    padding: 20px;
+    margin-top: 25px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+   
+}
+body{
+    overflow-x: hidden;
+}
+
+/* Skillset */
+.skillset{
+    margin-top: 35px;
+}
+.skillset > h2{
+    
+ background-color: var(--bgCol);
+     box-shadow: 0px 3px 12px 0px rgb(218, 218, 218);
+     text-align: center;
+     padding: 18px 0px 18px 0px;
+}
+.skilltext{
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.skillImg img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;;
+    margin: auto;
+    object-fit: cover;
+    background-color: grey;
+    animation: glow 0.5s linear alternate infinite;
+}
+.skill{
+ margin: auto;
+ background-color: var(--bgCol);
+
+    margin-top: 25px;
+    box-shadow: 0px 6px 10px 0px rgb(212, 212, 212);
+    padding: 15px;
+}
+.skill:hover{
+ box-shadow: 0px 8px 20px 0px rgb(175, 174, 174);
+}
+@media screen and (max-width: 800px){
+    .skill{
+        width: 80%;
+        
+    }
+}
+@media screen and (min-width: 800px){
+    .skill{
+        width: 40%;
+        
+    }
+}
+
+
+/* Projects */
+.skillButtons{
+    margin: 20px;
+    display: flex;
+    justify-content: center;;
+}
+.prevButton, .nextButton{
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 0px 1px 5px 0px rgb(121, 121, 121);;
+    background-color: white;
+    transition: 0.3s linear;
+}
+.prevButton:hover, .nextButton:hover{
+    box-shadow: 0px 2px 10px 0px black;
+}
+.projectset{
+    margin-top: 35px;
+    
+    margin-bottom: 35px;
+    display: flex;
+    overflow-x: scroll;
+}
+.projecthead{
+    background-color: var(--bgCol);
+     box-shadow: 0px 3px 12px 0px rgb(218, 218, 218);
+     text-align: center;
+     padding: 18px 0px 18px 0px;
+     margin-top: 35px;
+}
+.projecttext{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.projectImg img{
+    display: block;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;;
+    margin: auto;
+    object-fit: cover;
+    background-color: grey;
+    animation: glow 0.5s linear alternate infinite;
+}
+.project{
+ margin: auto;
+    margin: 25px;
+    background-color: var(--bgCol);
+    box-shadow: 0px 6px 10px 0px rgb(212, 212, 212);
+    padding: 15px;
+}
+.project:hover{
+ box-shadow: 0px 8px 20px 0px rgb(175, 174, 174);
+}
+@media screen and (max-width: 800px){
+    .project{
+        width: 80%;
+        
+    }
+}
+@media screen and (min-width: 800px){
+    .project{
+        width: 40%;
+        
+    }
+}
+
+/* Projects */
+.projectButtons{
+    margin: 20px;
+    display: flex;
+    justify-content: center;;
+}
+.ProjectBtn, .ProjectNxtBtn{
+    cursor: pointer;
+    border-radius: 3px;
+    margin: 3px;
+    padding: 10px;
+    border: 1px solid white;
+    box-shadow: 0px 1px 5px 0px rgb(121, 121, 121);;
+    background-color: white;
+    transition: 0.3s linear;
+}
+.ProjectBtn:hover, .ProjectNxtBtn:hover{
+    box-shadow: 0px 2px 10px 0px black;
+}

@@ -5,200 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel='stylesheet' href='./index.css'>
 </head>
 <body>
-    <style>
-        :root{
-            --bgCol: rgb(255, 255, 255);
-            --bodyCol: rgb(249, 247, 247);
-        }
-        *{
-            margin: 0;
-            
-        }
-       
-        body{
-            
-            background-color: var(--bodyCol);
-            font-family: cursive, Verdana, cursive, Geneva, Tahoma, sans-serif;
-        }
-        nav{
-            background-color: var(--bgCol);
-            display:flex;
-            justify-content: space-evenly;
-            
-            animation-name: rollin;
-            animation-duration: 1.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-            cursor: pointer;
-            position: sticky;
-            top: 0;
-            width: 100%;
-            border-bottom: 1px solid var(--bodyCol);
-            
-        }
-        nav:hover{
-            box-shadow: 0px 8px 20px 0px rgb(194, 194, 194);
-        }
-        
-        @keyframes rollin{
-            0%{
-                opacity: 0;
-                width: 0%;
-            }
-            66%{
-                opacity: 0;
-                width: 0%;
-            }
-            99%{
-                opacity: 1;
-                width: 100%;
-            }
-        }
-        nav .name{
-            text-align: center;
-            font-family: cursive;
-            font-size: large;
-            min-width: 45%;
-            transition: 0.4s linear;
-            animation-name: rollin;
-            animation-duration: 1.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-        nav .name, nav .status{
-            padding: 15px 0px 15px 0px;
-        }
-        .status{
-            min-width: 45%;
-            display: flex;
-            justify-content: space-evenly;
-            
-        }
-        .status li:hover, nav .name:hover{
-            /* background-color: rgb(255, 242, 211); */
-            background-color: black;
-            color: white;
-            padding: 15px;
-
-        }
-        .status li{
-            list-style-type: none;
-            text-align: center;
-            transition: 0.4s linear;
-            
-            padding: 10px 0px 10px 0px;
-            animation-name: rollin;
-            animation-duration: 1.5s;
-            animation-fill-mode: forwards;
-            animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-        }
-
-        @media screen and (max-width: 800px){
-            nav .status{
-            display: none;
-            opacity: 0;
-            transition: 0.5s linear;
-        }
-        nav:hover .status{
-            display: block;
-            opacity: 1;
-        }
-        nav{
-            display:block;
-        }
-        }
-        .aboutMe{
-            background-color: var(--bgCol);
-            
-            margin-top: 50px;
-
-            
-        }
-        @keyframes glow{
-            0%{
-                background-color: rgb(194, 192, 192);
-                
-            }
-            100%{
-                background-color: rgb(230, 227, 227); 
-            }
-        }
-        .aboutMe{
-                width: 93%;
-                margin: auto;
-                margin-top: 50px;
-                padding: 20px 8px 20px 8px;
-                transition: 0.5s linear;
-            }
-            .aboutMe:hover{
-                box-shadow: 0px 15px 30px 0px rgb(184, 182, 182);
-                border-radius: 25px;
-            }
-        
-            @media screen and (min-width: 800px){
-            .aboutMe{
-                display: flex;
-
-            }
-            
-        .aboutMe .myImg{
-            width: 40%;
-            }
-            .aboutMe img{
-                display: block;
-                /* background-color: navy; */
-                width: 99%;
-                
-                object-fit: cover;
-                margin: auto;
-                
-                animation: glow 0.5s linear alternate infinite;
-            }
-        }
-        @media screen and (max-width: 800px){
-            .aboutMe{
-                width: 99%;
-                margin: auto;
-                margin-top: 50px;
-            }
-            .aboutMe img{
-                display: block;
-                /* background-color: navy; */
-                width: 300px;
-                height: 300px;
-                border-radius: 50%;
-                
-                object-fit: cover;
-                margin: auto;
-                
-                animation: glow 0.5s linear alternate infinite;
-            }
-        }
-        @media screen and (min-width: 800px){
-            .aboutMe .text{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                align-content: center;
-            }
-            .aboutMe .text h2, .aboutMe .text p{
-                min-width: 70%;
-            }
-        }
-        .aboutMe .text{
-
-            padding: 20px;
-            margin-top: 25px;
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-           
-        }
-        body{
-            overflow-x: hidden;
-        }
-    </style>
+    
    <nav>
        <div class="name">
            Samuel Atuma
@@ -219,60 +29,15 @@
        <div class="text">
            <h2>Hello world!</h2>
            <p>Hello and welcome to my page. I am Samuel.</p>
-           <p>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.</p>
+           <p>
+               Engineering graduate from the University of Port Harcourt,
+               currently serving as a software instructor where I continually learn along with the students I teach.
+           </p>
        </div>
    </div>
 
    <div class='skillset'>
-       <style>
-           .skillset{
-               margin-top: 35px;
-           }
-           .skillset > h2{
-               
-            background-color: var(--bgCol);
-                box-shadow: 0px 3px 12px 0px rgb(218, 218, 218);
-                text-align: center;
-                padding: 18px 0px 18px 0px;
-           }
-           .skilltext{
-               
-               font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-           }
-           .skillImg img{
-               display: block;
-               width: 300px;
-               height: 300px;
-               border-radius: 50%;;
-               margin: auto;
-               object-fit: cover;
-               background-color: grey;
-               animation: glow 0.5s linear alternate infinite;
-           }
-           .skill{
-            margin: auto;
-            background-color: var(--bgCol);
-
-               margin-top: 25px;
-               box-shadow: 0px 6px 10px 0px rgb(212, 212, 212);
-               padding: 15px;
-           }
-           .skill:hover{
-            box-shadow: 0px 8px 20px 0px rgb(175, 174, 174);
-           }
-           @media screen and (max-width: 800px){
-               .skill{
-                   width: 80%;
-                   
-               }
-           }
-           @media screen and (min-width: 800px){
-               .skill{
-                   width: 40%;
-                   
-               }
-           }
-       </style>
+      
        <h2>SKILLS</h2>
         <div class="skill">
             <script>
@@ -280,28 +45,28 @@
                     skills = [{
                         'src': 'Python.png',
                         'header': 'Python',
-                        'text': 'Hello and welcome to my page. I am Samuel. <br>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.'
+                        'text': 'I was introduced to the world of programming with Python.<br> I mostly use python for back end web development and machine learning purposes.'
                     },
                     {
                         'src': 'html.png',
                         'header': 'HTML',
-                        'text': 'Python speaks to me and I hear'
+                        'text': 'HTML is what I use to structure my web page along with many others.'
                     },
                     {
                         'src': 'Js.png',
                         'header': 'JavaScript',
-                        'text': 'Hello and welcome to my page'
+                        'text': 'I love JavaScript for its versatility and use it along with a couple of its frameworks for front end web development. <br>'
                     },
                     {
                         'src': 'postgres.png',
                         'header': 'Postgres',
-                        'text': 'Hello and welcome to my page'
+                        'text': 'PostgreSQL is my go to language for database manipulation'
                     },
 
                     {
                         'src': 'css.png',
                         'header': 'Cascading Style Sheet',
-                        'text': 'Hello and welcome to my page'
+                        'text': 'I style my web page with css. I am also comfortable with SASS, and occassionally use Bootstrap for styling.'
                     },
                 
                 ]
@@ -340,7 +105,7 @@
                         document.querySelector('.skilltext p').innerHTML = skill.text || 'Details yet to be included'
 
                         count -= 1
-                        // alert('HEY')
+                        
                     }
                     else if(count == 0){
                         
@@ -376,31 +141,14 @@
             </div>
             <div class='skillButtons'>
                 <style>
-                    .skillButtons{
-                        margin: 20px;
-                        display: flex;
-                        justify-content: center;;
-                    }
-                    .prevButton, .nextButton{
-                        cursor: pointer;
-                        border-radius: 3px;
-                        margin: 3px;
-                        padding: 10px;
-                        border: 1px solid white;
-                        box-shadow: 0px 1px 5px 0px rgb(121, 121, 121);;
-                        background-color: white;
-                        transition: 0.3s linear;
-                    }
-                    .prevButton:hover, .nextButton:hover{
-                        box-shadow: 0px 2px 10px 0px black;
-                    }
+                    
                 </style>
                 <button class='prevButton'>Previous</button>
                 <button class='nextButton'>Next</button>
             </div>
             <div class="skilltext">
                 <h2>Hello world!</h2>
-                <!-- <p></p> -->
+            
                 <p>Hello and welcome to my page. I am Samuel. <br>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.</p>
             </div> 
         </div>
@@ -411,76 +159,11 @@
    <h2 class='projecthead'>PROJECTS</h2>
    <div class='projectset'>
     <style>
-        .projectset{
-            margin-top: 35px;
-            
-            margin-bottom: 35px;
-            display: flex;
-            overflow-x: scroll;
-        }
-        .projecthead{
-            background-color: var(--bgCol);
-             box-shadow: 0px 3px 12px 0px rgb(218, 218, 218);
-             text-align: center;
-             padding: 18px 0px 18px 0px;
-             margin-top: 35px;
-        }
-        .projecttext{
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        .projectImg img{
-            display: block;
-            width: 300px;
-            height: 300px;
-            border-radius: 50%;;
-            margin: auto;
-            object-fit: cover;
-            background-color: grey;
-            animation: glow 0.5s linear alternate infinite;
-        }
-        .project{
-         margin: auto;
-            margin: 25px;
-            background-color: var(--bgCol);
-            box-shadow: 0px 6px 10px 0px rgb(212, 212, 212);
-            padding: 15px;
-        }
-        .project:hover{
-         box-shadow: 0px 8px 20px 0px rgb(175, 174, 174);
-        }
-        @media screen and (max-width: 800px){
-            .project{
-                width: 80%;
-                
-            }
-        }
-        @media screen and (min-width: 800px){
-            .project{
-                width: 40%;
-                
-            }
-        }
+        
     </style>
     
     <style>
-        .projectButtons{
-            margin: 20px;
-            display: flex;
-            justify-content: center;;
-        }
-        .ProjectBtn, .ProjectNxtBtn{
-            cursor: pointer;
-            border-radius: 3px;
-            margin: 3px;
-            padding: 10px;
-            border: 1px solid white;
-            box-shadow: 0px 1px 5px 0px rgb(121, 121, 121);;
-            background-color: white;
-            transition: 0.3s linear;
-        }
-        .ProjectBtn:hover, .ProjectNxtBtn:hover{
-            box-shadow: 0px 2px 10px 0px black;
-        }
+        
     </style>
      <div class="project">
         
@@ -519,7 +202,7 @@
         
         <div class="projecttext">
             <h2>Hello world!</h2>
-            <!-- <p></p> -->
+            
             <p>Hello and welcome to my page. I am Samuel. <br>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.</p>
         </div> 
     </div>
