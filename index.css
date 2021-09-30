@@ -2,6 +2,10 @@
     --bgCol: rgb(255, 255, 255);
     --bodyCol: rgb(249, 247, 247);
 }
+html, body{
+    scroll-behavior: smooth;
+}
+
 *{
     margin: 0;
     
@@ -11,6 +15,10 @@ body{
     
     background-color: var(--bodyCol);
     font-family: Verdana, cursive, Geneva, Tahoma, sans-serif;
+}
+a{
+    color: inherit;
+    text-decoration: none;
 }
 nav{
     background-color: var(--bgCol);

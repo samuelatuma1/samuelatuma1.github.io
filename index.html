@@ -9,20 +9,21 @@
 </head>
 <body>
     
+    
    <nav>
-       <div class="name">
-           Samuel Atuma
+       <div class="name" >
+           <a href='#home'>Samuel Atuma</a>
        </div>
        <div class="status">
         
-           <li>Status</li>
+           <li><a href='#skillset'>Skillset</a></li>
         
-           <li>Gallery</li>
+           <li><a href='#projects'>Projects</a></li></li>
        </div>
    </nav>
 
    
-   <div class="aboutMe">
+   <div class="aboutMe" id='home'>
        <div class="myImg">
            <img src="samuel1.png" alt="My image">
        </div>
@@ -36,7 +37,7 @@
        </div>
    </div>
 
-   <div class='skillset'>
+   <div class='skillset' id='skillset'>
       
        <h2>SKILLS</h2>
         <div class="skill">
@@ -108,9 +109,8 @@
                         
                     }
                     else if(count == 0){
-                        
                         skill=skills[count]
-                    
+
                     document.querySelector('.skillImg img').src = skill.src || 'hello'
                     console.log(skill.src)
                     document.querySelector('.skilltext h2').innerHTML = skill.header || 'Details'
@@ -149,7 +149,7 @@
             <div class="skilltext">
                 <h2>Hello world!</h2>
             
-                <p>Hello and welcome to my page. I am Samuel. <br>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.</p>
+                <p>Hello again. I love to apply knowledge from mathematics to solve problems. Here is a breakdown of my skillset. </p>
             </div> 
         </div>
    </div>
@@ -157,14 +157,8 @@
 
 
    <h2 class='projecthead'>PROJECTS</h2>
-   <div class='projectset'>
-    <style>
-        
-    </style>
+   <div class='projectset' id='projects'>
     
-    <style>
-        
-    </style>
      <div class="project">
         
          <div class="projectImg ">
@@ -175,7 +169,9 @@
          <div class="projecttext">
              <h2>Runo DaySpring Chat Application!</h2>
              <!-- <p></p> -->
-             <p>Hello and welcome to my page. I am Samuel. <br>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.</p>
+             <p>
+                 Built a chat enabled application for an existing school website
+             </p>
          </div> 
      </div>
 
@@ -189,7 +185,9 @@
         <div class="projecttext">
             <h2>Runo Dayspring school magt site</h2>
             <!-- <p></p> -->
-            <p>Hello and welcome to my page. I am Samuel. <br>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.</p>
+            <p>
+                Built a complete school management website that gives admin complete control of managing their school's website.
+            </p>
         </div> 
     </div>
 
@@ -201,18 +199,13 @@
         </div>
         
         <div class="projecttext">
-            <h2>Hello world!</h2>
+            <h2>Food Ordering Application!</h2>
             
-            <p>Hello and welcome to my page. I am Samuel. <br>Mathematics has always been a friend, and for me, computer science speaks well to my Maths.</p>
+            <p>
+                Built a food ordering application using Python (Django Framework) and JavaScript.
+            </p>
         </div> 
     </div>
 </div>
-
-
-
-
-   
-
-
 </body>
 </html>
