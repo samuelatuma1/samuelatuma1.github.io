@@ -14,6 +14,7 @@ html, body{
 body{
     
     background-color: var(--bodyCol);
+    
     font-family: Verdana, cursive, Geneva, Tahoma, sans-serif;
 }
 a{
@@ -334,4 +335,24 @@ body{
 }
 .ProjectBtn:hover, .ProjectNxtBtn:hover{
     box-shadow: 0px 2px 10px 0px black;
+}
+.night{
+    background-color: rgba(0, 0, 19, 0.9);
+    color: white;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 25, 0.9);
+    /* box-shadow: 0px 5px 12px 0px black; */
+
+}
+.night:hover{
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 25, 0.9);
+}
+#nighty{
+    background-color: rgba(0, 0, 19, 0.9);
+    color: white;
+    box-shadow: 0px 1px 10px 0px rgba(0, 0, 25, 0.9);
+}
+.theme{
+    font-size: smaller;
+    padding: 4px;
+
 }

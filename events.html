@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.body.onload = () => {
+            body = document.body
+            body.onclick = (e) => {
+              console.log(e)  
+              if(e.target.tagName == 'P'){
+                clickedP(e)
+              }
+             }
+            // alert('hELLO')
+            const btn = document.querySelector('button')
+            btn.addEventListener('click', clicked)
+            btn.addEventListener('click', clickedAgain)
+            btn.onkeydown = (e) => {
+                alert(e.key)
+                if(e.key === 'Enter'){
+                    alert('submitted')
+                }
+            }
+            function clicked(e){
+                
+                alert(e.target.innerHTML)
+                let counts = parseInt(e.target.dataset.count || '0') + 1
+                // alert(counts)
+                e.target.dataset.count = String(counts)
+                e.stopPropagation()
+            }
+            function clickedAgain(e){
+                if (e.target.dataset.count > 1){
+                    let count = e.target.dataset.count
+                    alert(`clicked ${count} times`)
+                }
+            }
+            const ps = document.querySelectorAll('p')
+            // ps.forEach(p => {
+            //     p.onclick = (e) => {
+                    
+            //     }
+            // })
+            function clickedP(e){
+                alert(e.target.innerHTML)
+            }
+
+            p = document.createElement('p')
+            p.innerHTML = 'new Child'
+            body.appendChild(p)
+
+            
+        }
+    </script>
+
+    <button>Click me</button>
+    <p>Hey</p>
+    <p>heyeyey</p>
+    <p>Hi to you?</p>
+</body>
+</html>

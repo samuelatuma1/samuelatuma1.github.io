@@ -9,7 +9,75 @@
 </head>
 <body>
     
-    
+    <script>
+        document.body.onload = () => {
+            root = document.querySelector(':root')
+            // root.style.setProperty('--bgCol', 'green')
+            const theme = document.querySelector('.theme')
+
+            //spans
+            const colorThemes = theme.querySelectorAll('input[type=checkbox]')
+            colorThemes.forEach(color => {
+                color.onclick = function(e){
+                    colorThemes.forEach(color => {
+                        
+                        color.checked = false
+                    })
+                    this.checked = true
+                    const mode = this.value
+                    if(mode == 'night'){
+                        document.body.classList.add('night')
+
+                        spreadMode(mode)
+                    }
+                    else if(mode == 'day'){
+                        document.body.classList.remove('night')
+                        spreadMode(mode)
+
+                    }
+
+                }
+            })
+
+            const spreadMode = (mode) => {
+                const nav = document.querySelector('nav')
+                const h2 = document.querySelectorAll('h2')
+                const divs = document.querySelectorAll('div')
+                if( mode === 'night'){
+                    // document.body.classList.add('night')
+                    divs.forEach(div => {
+                        div.classList.add('night')    
+                      
+                    })
+
+                    nav.classList.add('night')
+                    
+                    h2.forEach(h => {
+                        h.id='nighty'
+                    })
+                   
+                    
+                }
+                else if (mode === 'day'){
+                    divs.forEach(div => {
+                        div.classList.remove('night')    
+                      
+                    })
+
+                    nav.classList.remove('night')
+                    
+                    h2.forEach(h => {
+                        h.id='day'
+                    })
+                }
+            }
+        }
+    </script>
+<div class="theme">
+    <span>Choose color Theme: </span>
+    <span><input type="checkbox" value='night'>Night</span>
+    <span><input type="checkbox" value='day'>Day</span>
+</div>
    <nav>
        <div class="name" >
            <a href='#home'>Samuel Atuma</a>
@@ -39,7 +107,7 @@
 
    <div class='skillset' id='skillset'>
       
-       <h2>SKILLS</h2>
+       <h2 class='heading'>SKILLS</h2>
         <div class="skill">
             <script>
                 document.addEventListener('DOMContentLoaded', () => {
@@ -156,7 +224,7 @@
 
 
 
-   <h2 class='projecthead'>PROJECTS</h2>
+   <h2 class='projecthead heading'>PROJECTS</h2>
    <div class='projectset' id='projects'>
     
      <div class="project">
