@@ -13,8 +13,32 @@
         document.body.onload = () => {
             root = document.querySelector(':root')
             // root.style.setProperty('--bgCol', 'green')
-            const theme = document.querySelector('.theme')
 
+
+            // night modde if night else day mode
+            function enableMode(){
+                let night = document.querySelector('input[value=night]')
+                const time = new Date().getHours()
+                let day = document.querySelector('input[value=day]')
+                
+                let mode = time > 17 || time < 6? 'night' : 'day'
+
+                if(mode == 'day'){
+                    day.click()
+                    spreadMode(mode)
+                }
+                else if(mode == 'night'){
+                    night.click()
+                    spreadMode(mode)
+                }
+            }
+            enableMode()
+
+
+
+
+            
+            const theme = document.querySelector('.theme')
             //spans
             const colorThemes = theme.querySelectorAll('input[type=checkbox]')
             colorThemes.forEach(color => {
@@ -26,12 +50,10 @@
                     this.checked = true
                     const mode = this.value
                     if(mode == 'night'){
-                        document.body.classList.add('night')
 
                         spreadMode(mode)
                     }
                     else if(mode == 'day'){
-                        document.body.classList.remove('night')
                         spreadMode(mode)
 
                     }
@@ -39,12 +61,14 @@
                 }
             })
 
-            const spreadMode = (mode) => {
+            function spreadMode(mode){
                 const nav = document.querySelector('nav')
                 const h2 = document.querySelectorAll('h2')
                 const divs = document.querySelectorAll('div')
                 if( mode === 'night'){
                     // document.body.classList.add('night')
+                    document.body.classList.add('night')
+
                     divs.forEach(div => {
                         div.classList.add('night')    
                       
@@ -59,6 +83,8 @@
                     
                 }
                 else if (mode === 'day'){
+                    document.body.classList.remove('night')
+
                     divs.forEach(div => {
                         div.classList.remove('night')    
                       
